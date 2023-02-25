@@ -1,0 +1,37 @@
+{"animals":
+[
+    {
+        "name": "Deniz",
+        "breed": "rabbit",
+        "description":"grey and super epic (the epicest)!",
+        "age":"4",
+        "country": "Turkey"
+    },
+    {
+        "name": "Izzy",
+        "breed": "cow",
+        "description": "brown, fluffy, super intelligent and incredibly cute (the funniest cow I've ever met!)",
+        "age":"6 months",
+        "country": "United Kingdom"
+    },
+    {
+        "name": "Amy",
+        "breed": "piglet",
+        "description":"pink and cuddly, super adorable, your bestest mate ever!",
+        "age":"3 months",
+        "country": "United Kingdom"
+    },
+    {
+        "name": "",
+        "breed": "",
+        "age":"",
+        "country": ""
+    },
+    {
+        "name": "",
+        "breed": "",
+        "age":"",
+        "country": ""
+    }
+]
+}
