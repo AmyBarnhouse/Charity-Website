@@ -5,6 +5,8 @@
 
 // })
 
+import data from './animals.json';
+
 document.getElementById('submitBtn').addEventListener('click', function(event){
   fetch('http://127.0.0.1:8090/thing/list')
    .then(response => response.json())
@@ -24,27 +26,7 @@ function renderThings (animalFacts){
   }
   };
 
-  var animals = require('./animals.json');
-  var bodyParser = require('body-parser');
-  app.use(bodyParser.urlencoded({extended: false}));
-
-  app.post('/new', function(req,resp){
-    console.log('Got request');
-    console.log(req.body);
-    const name = req.body.name;
-    const breed = req.body.breed;
-    const description = req.body.description;
-    const age = req.body.age;
-    const country = req.body.country;
-
-    const animal = {
-        'name': name,
-        'breed': breed,
-        'description': description,
-        'age': age,
-        'country': country,
-    };
-    animals.push(animal);
-    resp.send('Thank you for submitting an animal')
-})
+fetch('./animals.json')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
 
