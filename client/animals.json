@@ -22,16 +22,18 @@
         "country": "United Kingdom"
     },
     {
-        "name": "",
-        "breed": "",
-        "age":"",
-        "country": ""
+        "name": "Sarah",
+        "breed": "lamb",
+        "description":"kicks things, very noisy, doesn't cope well under stress",
+        "age":"4 years",
+        "country": "Swiss Alps"
     },
     {
-        "name": "",
-        "breed": "",
-        "age":"",
-        "country": ""
+        "name": "Ryan",
+        "breed": "gosling",
+        "description":"so funny and smart, colour-changing feathers",
+        "age":"10 months",
+        "country": "Northern Norfolk"
     }
 ]
 }

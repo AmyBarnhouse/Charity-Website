@@ -30,3 +30,24 @@ fetch('./animals.json')
   .then((response) => response.json())
   .then((json) => console.log(json));
 
+  let id = null;
+  /** This function produces an animation.
+   * I have a cartoon image of a sun moving a small section along the page in response to the user pressing submit to subscibe to the mental health newsletter.
+   * The intent is to make the user (target audience teens/students) feel happy about the prospect of working on their mental health.
+   */
+  function myMove () {
+    const elem = document.getElementById('sun');
+    let pos = 0;
+    console.log(window.innerWidth);
+    clearInterval(id);
+    id = setInterval(frame, 2);
+    function frame () {
+      if (pos == 200) {
+        clearInterval(id);
+      } else {
+        pos++;
+        // elem.style.top = pos + 'px';
+        elem.style.left = pos + 'px';
+      }
+    }
+  }
