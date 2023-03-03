@@ -34,7 +34,7 @@ app.post('/new', function(req,resp){
         'country': country,
     }];
     newAnimal.push();
-    resp.send('Thank you for submitting an animal' + newAnimal.name)
+    resp.send('Thank you for submitting an animal' + newAnimal)
 })
 
 

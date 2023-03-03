@@ -10,10 +10,10 @@
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   </head>
   <div class="container">
-  <header class="d-flex flex-wrap justify-content-center py-5">
+  <header class="d-flex flex-wrap justify-content-center py-5" id="topOfPage">
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-white">
       <div class="container-fluid">
-        <a class="navbar-brand zoom" href="#topOfPage"><h1 class="customFontTitle">ANIMAL CHARITY</h1></a>
+        <a class="navbar-brand zoom" href="#topOfPage"><h1 class="customFontTitle">ANIMAL SANCTUARY</h1></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -209,10 +209,40 @@
   
       <hr class="featurette-divider">
     <div id="Sponsor">
+      <form>
+      <div class="input-group mb-3">
+        <span class="input-group-text col-sm-2">First and last name</span>
+        <input type="text" aria-label="First name" class="form-control" id="first-name" required>
+        <input type="text" aria-label="Last name" class="form-control" id="last-name" required>
+      </div>
+      <!-- from Bootstrap - basic example - https://getbootstrap.com/docs/5.2/forms/select/ -->
+      <div class="input-group mb-3">
+        <span class="input-group-text col-sm-2">Email Address</span>
+        <input id="emailMsg" type="text" class="form-control" placeholder="name@example.com" required>
+      </div>
+      <div class="mb-3">
+        <label for="sourceInfo" class="form-label">How did you hear about us?</label>
+        <select class="form-select" aria-label="Default select example" name="sourceInfo">
+          <option selected>(select one)</option>
+          <option value="1">Social Media</option>
+          <option value="2">Newspaper</option>
+          <option value="3">School Advisor</option>
+          <option value="4">Other</option>
+        </select>
+        </div>
+        <div class="form-check" required>
+          <input class="form-check-input" type="checkbox" value="">
+          <label class="form-check-label" for="flexCheckDefault">
+            I accept the <a href="#">terms and conditions</a>
+          </label>
+        </div>
+        <div id="myContainer">
       <!--from w3schools - snackbar - https://www.w3schools.com/howto/howto_js_snackbar.asp -->
       <button class="w-20 btn btn-primary zoom float-end" type="submit" id="submitForm" onclick="myMove()">Submit</button>
       <div id="snackbar">Thank you for signing up!</div>
       <div id="tests"></div>
+      </div>
+      </form>
     </div>
     <div>
       <div id ="myContainer">

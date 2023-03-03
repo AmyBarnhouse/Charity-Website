@@ -1,11 +1,4 @@
-// window.addEventListener('click', function(event){
-//   fetch('http://127.0.0.1:8090/list')
-//   .then(response => response.text())
-//   .then(body =>document.getElementById('content').innerHTML=body)
-
-// })
-
-
+// prints list of animal facts
 document.getElementById('submitBtn').addEventListener('click', function(event){
   fetch('http://127.0.0.1:8090/thing/list')
    .then(response => response.json())
@@ -25,16 +18,21 @@ function renderThings (animalFacts){
   }
   };
 
-fetch('./animals.json')
-  .then((response) => response.json())
-  .then((json) => console.log(json));
 
-  let id = null;
+//snackbar displays pop-up message when the user signs up to provide a positive experience for them and show gratitude for sponsoring the animals.
+document.getElementById("submitForm").addEventListener('click', function(event){
+/* find the div element where the snackbar will be inserted */
+const x = document.getElementById('snackbar');
+x.className = 'show';
+/* sets a timer so that the snackbar only shows for 3 seconds */
+setTimeout(function () { x.className = x.className.replace('show', ''); }, 3000);
+})
+let id = null;
   /** This function produces an animation.
-   * I have a cartoon image of a sun moving a small section along the page in response to the user pressing submit to subscibe to the mental health newsletter.
-   * The intent is to make the user (target audience teens/students) feel happy about the prospect of working on their mental health.
+   * I have a cartoon image of a sun moving a small section along the page in response to the user pressing submit to subscibe to sanctuary's news.
    */
-  function myMove () {
+
+document.getElementById("submitForm").addEventListener('click', function(event){
     const elem = document.getElementById('sun');
     let pos = 0;
     console.log(window.innerWidth);
@@ -49,4 +47,10 @@ fetch('./animals.json')
         elem.style.left = pos + 'px';
       }
     }
-  }
+  })
+
+
+//connects to json file
+fetch('./animals.json')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
