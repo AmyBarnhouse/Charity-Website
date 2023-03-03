@@ -5,7 +5,6 @@
 
 // })
 
-import data from './animals.json';
 
 document.getElementById('submitBtn').addEventListener('click', function(event){
   fetch('http://127.0.0.1:8090/thing/list')
@@ -18,7 +17,7 @@ document.getElementById('submitBtn').addEventListener('click', function(event){
 
 function renderThings (animalFacts){
   //alert(things);
-  let container = document.getElementById('animals');
+  let container = document.getElementById('animalFacts');
   for(let thing of animalFacts){
      let item = document.createElement('li')
      item.innerHTML = thing;

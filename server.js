@@ -26,15 +26,15 @@ app.post('/new', function(req,resp){
     const age = req.body.age;
     const country = req.body.country;
  
-    const animal = [{
+    const newAnimal = [{
         'name': name,
         'breed': breed,
         'description': description,
         'age': age,
         'country': country,
     }];
-    animal.push();
-    resp.send('Thank you for submitting an animal')
+    newAnimal.push();
+    resp.send('Thank you for submitting an animal' + newAnimal.name)
 })
 
 
