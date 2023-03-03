@@ -95,6 +95,12 @@ body {
     --bs-btn-hover-border-color: #E95728;
 }
 
+.btn-primary:disabled{
+    background-color: #E95728;
+    border-color: #E95728;
+    color: #FFE3D9;
+}
+
 #sun {
     width:150px;
     height:150px;

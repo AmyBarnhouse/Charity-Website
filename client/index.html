@@ -9,6 +9,7 @@
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   </head>
+
   <div class="container">
   <header class="d-flex flex-wrap justify-content-center py-5" id="topOfPage">
     <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-white">
@@ -44,6 +45,7 @@
     </nav>
   </header>
   </div>
+  
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
@@ -95,7 +97,7 @@
 
   <body id="content">
     <h1 id="About">About Us:</h1>
-    <button id="submitBtn" type="button">Click Here to Learn About Us!</button>
+    <button class="w-20 btn btn-primary zoom float-end" id="submitBtn" type="button">Do you want to sponsor one of our animals? Click here for more information.</button>
     <ul id="animalFacts"></ul>
     <div class="col-lg-4">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
@@ -208,18 +210,59 @@
       </div>
   
       <hr class="featurette-divider">
-    <div id="Sponsor">
+    
+    
+    
+      <div id="Sponsor">
+      <h2>Sign Up Here:</h2>
       <form>
       <div class="input-group mb-3">
         <span class="input-group-text col-sm-2">First and last name</span>
         <input type="text" aria-label="First name" class="form-control" id="first-name" required>
         <input type="text" aria-label="Last name" class="form-control" id="last-name" required>
       </div>
+      
+      <div id="dataFile">
+        <script type="text/javascript">
+          fetch('animals.json')
+          .then(function (response) {
+              return response.json();
+          })
+          .then(function (data) {
+              appendData(data);
+          })
+          .catch(function (err) {
+              console.log('error: ' + err);
+          });
+
+          function appendData(data) {
+              let mainContainer = document.getElementById("dataFile");
+              for (let i = 0; i < data.length; i++) {
+                  let div = document.createElement("div");
+                  div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
+                  mainContainer.appendChild(div);
+              }
+          }
+        </script>
+      </div>
+
+      <div class="mb-3">
+        <label for="sourceInfo" class="form-label">Which animal would you like to sponsor?</label>
+        <select class="form-select" aria-label="Default select example" name="sourceInfo">
+          <option selected>(select one)</option>
+          <option value="1">Rabbit</option>
+          <option value="2">Cow</option>
+          <option value="3">Pig</option>
+          <option value="4">Lamb</option>
+          <option value="5">Goose</option>
+        </select>
+        </div>
       <!-- from Bootstrap - basic example - https://getbootstrap.com/docs/5.2/forms/select/ -->
       <div class="input-group mb-3">
         <span class="input-group-text col-sm-2">Email Address</span>
         <input id="emailMsg" type="text" class="form-control" placeholder="name@example.com" required>
       </div>
+      
       <div class="mb-3">
         <label for="sourceInfo" class="form-label">How did you hear about us?</label>
         <select class="form-select" aria-label="Default select example" name="sourceInfo">
@@ -244,6 +287,8 @@
       </div>
       </form>
     </div>
+    
+    
     <div>
       <div id ="myContainer">
       <div>

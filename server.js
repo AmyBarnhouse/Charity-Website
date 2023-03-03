@@ -1,9 +1,11 @@
 var express = require('express');
 var app = express();
 
-let animalFacts = ['Our animals come from all over the world',
-    'They quite often come from harsh backgrounds and require extra care and support from us',
-  'We can keep looking after them with your help',
+let animalFacts = ['Our animals come from all over the world,',
+    'They quite often come from harsh backgrounds and require extra care and support from us.',
+  'We can keep looking after them with your help.',
+  'Our visitor centre is open for families to come and meet our little friends all year round.',
+  'Highlights include our petting stations and an animal-themed play area for children!',
 'Donate today!!'];
 
 app.use(express.static('client'));

@@ -8,6 +8,13 @@ document.getElementById('submitBtn').addEventListener('click', function(event){
       .catch((error) => alert(error))
 });
 
+document.getElementById("submitBtn").onclick = function() {
+  //disable
+  this.disabled = true;
+
+  //do some validation stuff
+}
+
 function renderThings (animalFacts){
   //alert(things);
   let container = document.getElementById('animalFacts');
@@ -48,6 +55,12 @@ document.getElementById("submitForm").addEventListener('click', function(event){
       }
     }
   })
+
+  document.getElementById('emailMsg').addEventListener('click', emailAlert);
+  /** Displays alert to user when they click to put in their email address. */
+  function emailAlert () {
+    alert('We promise to only send you helpful and relevant information.');
+  }
 
 
 //connects to json file
