@@ -1,8 +1,38 @@
-<form action="http://127.0.0.1:8090/new" method="post">
-    <p>Name <input name="name"></p>
-    <p>Breed<input name="breed"></p>
-    <p>Description<input name="description"></p>
-    <p>Age<input name="age"></p>
-    <p>Nationality<input name="country"></p>
-    <p><input type="submit" value="Submit"></p>
-  </form>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Charity Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  </head>
+
+<div class="container justify-content-center">
+  <body>
+    <div class="row align-items-md-stretch mt-5" id="adminBoxes">
+      <div class="col-md-6" id="adminBoxes">
+        <div class="h-100 p-5 text-bg-light rounded-3" id="adminBoxes">
+          <h1>Enter a new animal here:</h1>
+          <form action="http://127.0.0.1:8090/new" method="post">
+            <p>Name: <input name="name" required></p>
+            <p>Breed: <input name="breed" required></p>
+            <p>Description: <input name="description" required></p>
+            <p>Age: <input name="age" required></p>
+            <p>Nationality (country name): <input name="country" required></p>
+            <p><input type="submit" value="Submit"></p>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-6" id="adminBoxes">
+        <div class="h-100 p-5 bg-light border rounded-3" id="adminBoxes">
+        </div>
+      </div>
+    </div>
+  </body>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script type="module" src="client.js"></script>
+</html>

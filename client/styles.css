@@ -112,3 +112,7 @@ body {
     height: 150px;
     position: relative;
   }
+
+#adminBoxes{
+    background-color: #FFE3D9;
+}
