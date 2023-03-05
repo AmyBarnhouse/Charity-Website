@@ -8,8 +8,9 @@
     <link href="styles.css" rel="stylesheet">
     <script src="https://d3js.org/d3.v4.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
   </head>
-
+<header> <a class="navbar-brand zoom" href="index.html"><a class="btn btn-primary btn-lg" href="index.html">RETURN TO CUSTOMER HOMEPAGE</a></a></header>
 <div class="container justify-content-center">
   <body>
     <div class="row align-items-md-stretch mt-5" id="adminBoxes">
@@ -29,6 +30,21 @@
       </div>
       <div class="col-md-6" id="adminBoxes">
         <div class="h-100 p-5 bg-light border rounded-3" id="adminBoxes">
+          <script>
+            getData();
+            async function getData(){
+              const response = await fetch('animals.json');
+              console.log(response);
+              const data = await response.json();
+              console.log(data);
+              labels = [];
+              values = [];
+              for(i = 0; i < length; i++) {
+                labels.push(data.data[i].name);
+                values.push(data.data[i].breed);
+              }
+            }
+          </script>
         </div>
       </div>
     </div>
