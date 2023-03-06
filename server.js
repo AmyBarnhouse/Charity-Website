@@ -10,6 +10,14 @@ let animalFacts = ['Our animals come from all over the world,',
 
 app.use(express.static('client'));
 
+// app.get('/', (req,res) => {
+//     res.send('hello world');
+// })
+
+// app.get('/api/courses', (req, res) => {
+//     res.send([1,2,3,4]);
+// })
+
 app.get('/thing/list', function(req, resp){
     // resp.send(things);
     resp.json(animalFacts);
@@ -40,4 +48,4 @@ app.post('/new', function(req,resp){
 })
 
 
-app.listen(8090)
+app.listen(8090, () => console.log('Listening on port 8090...'))
