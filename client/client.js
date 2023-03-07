@@ -25,7 +25,8 @@ function renderThings(animalFacts) {
   }
 }
 
-// snackbar displays pop-up message when the user signs up to provide a positive experience for them and show gratitude for sponsoring the animals.
+// snackbar displays pop-up message when the user signs up 
+//to provide a positive experience for them and show gratitude for sponsoring the animals.
 document.getElementById('submitForm').addEventListener('click', (event) => {
 /* find the div element where the snackbar will be inserted */
   const x = document.getElementById('snackbar');
@@ -35,7 +36,8 @@ document.getElementById('submitForm').addEventListener('click', (event) => {
 });
 let id = null;
 /** This function produces an animation.
-   * I have a cartoon image of a sun moving a small section along the page in response to the user pressing submit to subscibe to sanctuary's news.
+   * I have a cartoon image of a sun moving a small section along the page 
+   * in response to the user pressing submit to subscibe to sanctuary's news.
    */
 
 document.getElementById('submitForm').addEventListener('click', (event) => {
@@ -63,5 +65,22 @@ function emailAlert() {
 
 // connects to json file
 fetch('./animals.json')
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(products){
+    let placeholder = document.querySelector("data-output");
+    let out = "";
+    for(let product of products){
+      out += `
+      <tr>
+        <td>${product.name}</td>
+        <td>${product.breed}</td>
+        <td>${product.description}</td>
+        <td>${product.age}</td>
+        <td>${product.country}</td>
+      </tr>
+      `;
+    }
+    placeholder.innerHTML = out;
+  })
