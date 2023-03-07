@@ -4,6 +4,7 @@
   "description": "References: - carousel images from pixabay, accessed 3/3/23     https://pixabay.com/photos/nature-pasture-livestock-cattle-5625841/     https://pixabay.com/photos/sheeps-lambs-flock-animals-graze-3437467/     https://pixabay.com/photos/piggy-young-animals-pig-small-2782618/",
   "main": "server.js",
   "scripts": {
+    "lint": "eslint ./ --fix",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
@@ -17,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/AmyBarnhouse/Charity-Website/issues"
   },
-  "homepage": "https://github.com/AmyBarnhouse/Charity-Website#readme"
+  "homepage": "https://github.com/AmyBarnhouse/Charity-Website#readme",
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  }
 }

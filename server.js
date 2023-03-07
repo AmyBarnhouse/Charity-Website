@@ -1,12 +1,13 @@
-var express = require('express');
-var app = express();
+const express = require('express');
 
-let animalFacts = ['Our animals come from all over the world,',
-    'They quite often come from harsh backgrounds and require extra care and support from us.',
+const app = express();
+
+const animalFacts = ['Our animals come from all over the world,',
+  'They quite often come from harsh backgrounds and require extra care and support from us.',
   'We can keep looking after them with your help.',
   'Our visitor centre is open for families to come and meet our little friends all year round.',
   'Highlights include our petting stations and an animal-themed play area for children!',
-'Donate today!!'];
+  'Donate today!!'];
 
 app.use(express.static('client'));
 
@@ -18,34 +19,68 @@ app.use(express.static('client'));
 //     res.send([1,2,3,4]);
 // })
 
-app.get('/thing/list', function(req, resp){
-    // resp.send(things);
-    resp.json(animalFacts);
-   })
-
-var animals = require('/Users/amybarnhouse/Documents/Degree/Year 1/Programming/term 2/summative assignment/Charity/Charity-Website/client/animals.json');
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({extended: false}));
- 
-app.post('/new', function(req,resp){
-    console.log('Got request');
-    console.log(req.body);
-    const name = req.body.name;
-    const breed = req.body.breed;
-    const description = req.body.description;
-    const age = req.body.age;
-    const country = req.body.country;
- 
-    const newAnimal = [{
-        'name': name,
-        'breed': breed,
-        'description': description,
-        'age': age,
-        'country': country,
-    }];
-    newAnimal.push();
-    resp.send('Thank you for submitting an animal')
-})
+app.get('/thing/list', (req, resp) => {
+  // resp.send(things);
+  resp.json(animalFacts);
+});
 
 
-app.listen(8090, () => console.log('Listening on port 8090...'))
+const bodyParser = require('body-parser');
+const json = require('./client/animals.json');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.post('/new', (req, resp) => {
+  console.log('Got request');
+  console.log(req.body);
+  const { name } = req.body;
+  const { breed } = req.body;
+  const { description } = req.body;
+  const { age } = req.body;
+  const { country } = req.body;
+
+  const newAnimal = [{
+    'name': name,
+    'breed': breed,
+    'description': description,
+    'age': age,
+    'country': country
+  }];
+
+  console.log(newAnimal)
+  reply = {
+    note: 'Thank you for submitting a new animal',
+    name: name,
+    breed: breed,
+    description: description,
+    age: age,
+    country: country
+  }
+  resp.send(reply);
+
+  newAnimal.push();
+
+  console.log(json.animals)
+  json.animals.push(newAnimal);
+  jsonstr = JSON.stringify(json);
+  console.log(json.animals)
+  console.log('gsjsgjsgb')
+  console.log(jsonstr)
+
+  console.log(json.animals)
+});
+
+app.get('/animal', (req, res) => {
+  const search = req.query.search;
+  res.send(JSON.stringify(json.animals));;
+
+  for (let i = 0; i < animals.length; i++) {
+    let animal = animals[i];
+    if (animal.breed.includes(search)) {
+      results.push(animal.fun_fact);
+    }
+  }
+  res.send(results);
+});
+
+app.listen(8090, () => console.log('Listening on port 8090...'));
