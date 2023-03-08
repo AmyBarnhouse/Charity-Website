@@ -49,21 +49,22 @@ app.post('/new', (req, resp) => {
 
   console.log(newAnimal)
   reply = {
-    note: 'Thank you for submitting a new animal',
+    note: 'Thank you for submitting a new animal request.',
     name: name,
     breed: breed,
     description: description,
     age: age,
     country: country
   }
-  resp.send(reply);
+  string = reply.stringify
+  resp.send(string);
 
   newAnimal.push();
 
-  console.log(json.animals)
-  json.animals.push(newAnimal);
+  console.log(json)
+  json.push(newAnimal);
   jsonstr = JSON.stringify(json);
-  console.log(json.animals)
+  console.log(json)
   console.log('gsjsgjsgb')
   console.log(jsonstr)
 
@@ -72,7 +73,7 @@ app.post('/new', (req, resp) => {
 
 app.get('/animal', (req, res) => {
   const search = req.query.search;
-  res.send(JSON.stringify(json.animals));;
+  res.send(JSON.stringify(json));;
 
   for (let i = 0; i < animals.length; i++) {
     let animal = animals[i];

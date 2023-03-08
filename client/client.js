@@ -82,3 +82,19 @@ function emailAlert() {
 //     }
 //     placeholder.innerHTML = out;
 //   });
+
+fetch("animals.json")
+.then(response => response.json())
+.then(data => {
+  for(let item of data){
+    console.log(item.name)
+    document.querySelector('.heading').innerText += ((item.name) + (" ") + ("the") + (" ") + (item.breed) + ("\n"))
+  }
+})
+
+fetch("animals.json")
+.then(response => response.json())
+.then(data => {
+  document.querySelector('#aniName1').innerText = data[1].name
+  document.querySelector('#aniBreed1').innerText = data[1].breed
+})
