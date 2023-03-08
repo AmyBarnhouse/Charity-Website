@@ -1,4 +1,4 @@
-{"animals":[
+[
     {"name": "Deniz", "breed": "rabbit", "description":"grey and super epic (the epicest)!", "age":"4", "country": "Turkey"},
     {"name": "Izzy", "breed": "cow", "description": "brown, fluffy, super intelligent and incredibly cute", "age":"6 months", "country": "United Kingdom"},
     {"name": "Amy", "breed": "piglet", "description":"pink and cuddly, super adorable, your bestest mate ever!", "age":"3 months", "country": "United Kingdom"},
@@ -7,4 +7,4 @@
     {"name":"Alison","breed":"border collie","description":"spritely, energetic ball of cuddliness","age":"10","country":"Suffolk, United Kingdom"},
     {"name":"Amber","breed":"cow","description":"fluffy highland cow, very cute and friendly and cool (the funniest cow I've ever met!)","age":"18 years","country":"Scotland, United Kingdom"},
     {"name": "Ted", "breed":"terrapin turtle", "description":"slow-moving and has a great sense of humour","age":"27", "country":"Aruba"}
-    ]}
+    ]

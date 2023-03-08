@@ -113,31 +113,25 @@
 
       </tbody>
     </table>
-    <script>
-      fetch('./animals.json')
-  .then(function(response){
-    return response.json();
-  })
-  .then(function(products){
-    let placeholder = document.querySelector("data-output");
-    let out = "";
-    for(let product of products){
-      out += `
-      <tr>
-        <td>${product.name}</td>
-        <td>${product.breed}</td>
-        <td>${product.description}</td>
-        <td>${product.age}</td>
-        <td>${product.country}</td>
-      </tr>
-      `;
-    }
-    placeholder.innerHTML = out;
-  })
-    </script>
+    
+    
+    <div>
+      <script>
+        fetch("animals.json")
+          .then(response => response.json())
+          .then(data => {
+            for(let item of data){
+              console.log(item.name)
+              document.querySelector('#name').innerText += (item.name)    
+              document.querySelector('#name').innerText += (item.age)  
+            }
+          })
+      </script>
+    </div>
+    <div id="listOfAnimals"></div>
     <div class="col-lg-4">
       <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-      <h2 class="fw-normal">Heading</h2>
+      <h2 class="fw-normal" id="name"></h2>
       <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
       <p><a class="btn btn-secondary" href="#">View details »</a></p>
     </div><!-- /.col-lg-4 -->

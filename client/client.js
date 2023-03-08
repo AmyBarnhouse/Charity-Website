@@ -64,23 +64,21 @@ function emailAlert() {
 }
 
 // connects to json file
-fetch('./animals.json')
-  .then(function(response){
-    return response.json();
-  })
-  .then(function(products){
-    let placeholder = document.querySelector("data-output");
-    let out = "";
-    for(let product of products){
-      out += `
-      <tr>
-        <td>${product.name}</td>
-        <td>${product.breed}</td>
-        <td>${product.description}</td>
-        <td>${product.age}</td>
-        <td>${product.country}</td>
-      </tr>
-      `;
-    }
-    placeholder.innerHTML = out;
-  })
+// fetch('./animals.json')
+//   .then((response) => response.json())
+//   .then((animals) =>{
+//     const placeholder = document.querySelector('data-output');
+//     let out = '';
+//     for (let animal of animals.animals){
+//       out += `
+//       <tr>
+//         <td>${animal.name}</td>
+//         <td>${animal.breed}</td>
+//         <td>${animal.description}</td>
+//         <td>${animal.age}</td>
+//         <td>${animal.country}</td>
+//       </tr>
+//       `;
+//     }
+//     placeholder.innerHTML = out;
+//   });
