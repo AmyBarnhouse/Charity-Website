@@ -1,10 +1,11 @@
 [
-    {"name": "Deniz", "breed": "rabbit", "description":"grey and super epic (the epicest)!", "age":"4", "country": "Turkey"},
-    {"name": "Izzy", "breed": "cow", "description": "brown, fluffy, super intelligent and incredibly cute", "age":"6 months", "country": "United Kingdom"},
-    {"name": "Amy", "breed": "piglet", "description":"pink and cuddly, super adorable, your bestest mate ever!", "age":"3 months", "country": "United Kingdom"},
-    {"name": "Sarah", "breed": "lamb", "description":"kicks things, very noisy, doesn't cope well under stress", "age":"4 years", "country": "Alps, Switzerland"},
-    {"name": "Ryan", "breed": "gosling", "description":"so funny and smart, colour-changing feathers", "age":"10 months", "country": "Northern Norfolk, United Kingdom"},
-    {"name":"Alison","breed":"border collie","description":"spritely, energetic ball of cuddliness","age":"10","country":"Suffolk, United Kingdom"},
-    {"name":"Amber","breed":"cow","description":"fluffy highland cow, very cute and friendly and cool (the funniest cow I've ever met!)","age":"18 years","country":"Scotland, United Kingdom"},
-    {"name": "Ted", "breed":"terrapin turtle", "description":"slow-moving and has a great sense of humour","age":"27", "country":"Aruba"}
+    {"name": "Deniz", "breed": "Rabbit", "description":"spotty and super epic (the epicest)!", "age":"4 years", "country": "Turkey"},
+    {"name": "Izzy", "breed": "Cow", "description": "brown, fluffy, super intelligent and incredibly cute", "age":"6 months", "country": "United Kingdom"},
+    {"name": "Amy", "breed": "Piglet", "description":"pink and cuddly, super adorable, your bestest mate ever!", "age":"3 months", "country": "United Kingdom"},
+    {"name": "Sarah", "breed": "Lamb", "description":"kicks things, very noisy, doesn't cope well under stress", "age":"4 years", "country": "Alps, Switzerland"},
+    {"name": "Ryan", "breed": "Gosling", "description":"so funny and smart, colour-changing feathers", "age":"10 months", "country": "Northern Norfolk, United Kingdom"},
+    {"name":"Alison","breed":"Border Collie","description":"spritely, energetic ball of cuddliness","age":"10 years","country":"Suffolk, United Kingdom"},
+    {"name":"Amber","breed":"Cow","description":"fluffy highland cow, very cute and friendly and cool (the funniest cow I've ever met!)","age":"18 years","country":"Scotland, United Kingdom"},
+    {"name": "Ted", "breed":"Terrapin Turtle", "description":"slow-moving and has a great sense of humour","age":"27 years", "country":"Aruba"},
+    {"name": "Caitlin", "breed": "Pygmy Goat", "description":"sleeps a lot, occasionally aggressive", "age":"4 years", "country":"Chad"}
     ]

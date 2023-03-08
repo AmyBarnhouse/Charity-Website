@@ -83,18 +83,27 @@ function emailAlert() {
 //     placeholder.innerHTML = out;
 //   });
 
-fetch("animals.json")
-.then(response => response.json())
-.then(data => {
-  for(let item of data){
-    console.log(item.name)
-    document.querySelector('.heading').innerText += ((item.name) + (" ") + ("the") + (" ") + (item.breed) + ("\n"))
-  }
-})
+
 
 fetch("animals.json")
 .then(response => response.json())
 .then(data => {
+  document.querySelector('#aniName0').innerText = data[0].name
+  document.querySelector('#aniBreed0').innerText = data[0].breed
   document.querySelector('#aniName1').innerText = data[1].name
   document.querySelector('#aniBreed1').innerText = data[1].breed
+  document.querySelector('#aniName2').innerText = data[2].name
+  document.querySelector('#aniBreed2').innerText = data[2].breed
+  document.querySelector('#aniName3').innerText = data[3].name
+  document.querySelector('#aniBreed3').innerText = data[3].breed
+  document.querySelector('#aniName4').innerText = data[4].name
+  document.querySelector('#aniBreed4').innerText = data[4].breed
+  document.querySelector('#aniName5').innerText = data[5].name
+  document.querySelector('#aniBreed5').innerText = data[5].breed
+  document.querySelector('#aniName6').innerText = data[6].name
+  document.querySelector('#aniBreed6').innerText = data[6].breed
+  document.querySelector('#aniName7').innerText = data[7].name
+  document.querySelector('#aniBreed7').innerText = data[7].breed
+  document.querySelector('#aniName8').innerText = data[8].name
+  document.querySelector('#aniBreed8').innerText = data[8].breed
 })

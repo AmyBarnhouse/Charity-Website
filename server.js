@@ -68,7 +68,7 @@ app.post('/new', (req, resp) => {
   console.log('gsjsgjsgb')
   console.log(jsonstr)
 
-  console.log(json.animals)
+  console.log(json)
 });
 
 app.get('/animal', (req, res) => {
