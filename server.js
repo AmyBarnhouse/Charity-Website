@@ -30,6 +30,7 @@ const json = require('./client/animals.json');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+// a new animal is added to the json file of all the animals, visible on 'http://127.0.0.1:8090/animal'
 app.post('/new', (req, resp) => {
   console.log('Got request');
   console.log(req.body);
@@ -57,8 +58,8 @@ app.post('/new', (req, resp) => {
     country: country
   }
   string = reply.stringify
-  resp.send(string);
-
+  resp.send(reply.stringify);
+  console.log(reply)
   newAnimal.push();
 
   console.log(json)

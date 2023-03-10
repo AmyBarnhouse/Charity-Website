@@ -84,6 +84,11 @@ function emailAlert() {
 //   });
 
 
+document.getElementById('about0').addEventListener('click', (event) => {
+  const box = document.createElement('p')
+  box.setAttribute('id', 'boxAbout0')
+})
+
 
 fetch("animals.json")
 .then(response => response.json())
@@ -106,4 +111,5 @@ fetch("animals.json")
   document.querySelector('#aniBreed7').innerText = data[7].breed
   document.querySelector('#aniName8').innerText = data[8].name
   document.querySelector('#aniBreed8').innerText = data[8].breed
+  document.querySelector('#about0').innerText = data[0].age + ('\n') + data[0].description + ('\n') + data[0].country
 })
