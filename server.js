@@ -27,6 +27,7 @@ app.get('/thing/list', (req, resp) => {
 
 const bodyParser = require('body-parser');
 const json = require('./client/animals.json');
+const jsonV = require('./client/volunteers.json')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -40,7 +41,7 @@ app.post('/new', (req, resp) => {
   const { age } = req.body;
   const { country } = req.body;
 
-  const newAnimal = [{
+  let newAnimal = [{
     'name': name,
     'breed': breed,
     'description': description,
@@ -49,7 +50,7 @@ app.post('/new', (req, resp) => {
   }];
 
   console.log(newAnimal)
-  reply = {
+  let reply = {
     note: 'Thank you for submitting a new animal request.',
     name: name,
     breed: breed,
@@ -57,8 +58,8 @@ app.post('/new', (req, resp) => {
     age: age,
     country: country
   }
-  string = reply.stringify
-  resp.send(reply.stringify);
+  let string = reply.stringify
+  resp.send(string);
   console.log(reply)
   newAnimal.push();
 
@@ -80,6 +81,19 @@ app.get('/animal', (req, res) => {
     let animal = animals[i];
     if (animal.breed.includes(search)) {
       results.push(animal.fun_fact);
+    }
+  }
+  res.send(results);
+});
+
+app.get('/volunteer', (req, res) => {
+  const search = req.query.search;
+  res.send(JSON.stringify(jsonV));;
+
+  for (let i = 0; i < volunteers.length; i++) {
+    let volunteer = volunteers[i];
+    if (volunteer.tag.includes(search)) {
+      results.push(volunteer.tag);
     }
   }
   res.send(results);

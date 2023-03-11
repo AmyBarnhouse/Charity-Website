@@ -14,6 +14,7 @@
 <div class="container justify-content-center">
   <body>
     <div class="row align-items-md-stretch mt-5" id="adminBoxes">
+      
       <div class="col-md-6" id="adminBoxes">
         <div class="h-100 p-5 text-bg-light rounded-3" id="adminBoxes">
           <p>ADMIN PAGE - VOLUNTEERS AND EMPLOYEES ONLY</p>
@@ -28,6 +29,7 @@
           </form>
         </div>
       </div>
+      
       <div class="col-md-6" id="adminBoxes">
         <div class="h-100 p-5 bg-light border rounded-3" id="adminBoxes">
           <a class="btn btn-primary btn-lg" href="#">Manage Volunteers</a>
@@ -35,21 +37,6 @@
           <a class="btn btn-primary btn-lg" href="#">Control Events</a>
           <p></p>
           <a class="btn btn-primary btn-lg" href="#">Sponsorship Settings</a>
-          <script>
-            getData();
-            async function getData(){
-              const response = await fetch('animals.json');
-              console.log(response);
-              const data = await response.json();
-              console.log(data);
-              labels = [];
-              values = [];
-              for(i = 0; i < length; i++) {
-                labels.push(data.data[i].name);
-                values.push(data.data[i].breed);
-              }
-            }
-          </script>
         </div>
       </div>
     </div>

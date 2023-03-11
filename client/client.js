@@ -1,4 +1,4 @@
-// prints list of animal facts
+// prints list of facts about sponsorship of the farmyard animals
 document.getElementById('submitBtn').addEventListener('click', (event) => {
   fetch('http://127.0.0.1:8090/thing/list')
     .then((response) => response.json())
@@ -113,3 +113,11 @@ fetch("animals.json")
   document.querySelector('#aniBreed8').innerText = data[8].breed
   document.querySelector('#about0').innerText = data[0].age + ('\n') + data[0].description + ('\n') + data[0].country
 })
+
+fetch("volunteers.json")
+.then(response => response.json())
+.then(data => {
+  let names = data.map(element=> element.tag)
+  console.log(names)
+})
+
