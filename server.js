@@ -41,7 +41,7 @@ app.post('/new', (req, resp) => {
   const { age } = req.body;
   const { country } = req.body;
 
-  let newAnimal = [{
+  newAnimal = [{
     'name': name,
     'breed': breed,
     'description': description,
@@ -50,17 +50,15 @@ app.post('/new', (req, resp) => {
   }];
 
   console.log(newAnimal)
-  let reply = {
-    note: 'Thank you for submitting a new animal request.',
+  reply = {note: 'Thank you for submitting a new animal request',
     name: name,
     breed: breed,
     description: description,
     age: age,
-    country: country
-  }
-  let string = reply.stringify
+    country: country};
+  string = JSON.stringify(reply);
   resp.send(string);
-  console.log(reply)
+  console.log(string)
   newAnimal.push();
 
   console.log(json)
@@ -86,17 +84,9 @@ app.get('/animal', (req, res) => {
   res.send(results);
 });
 
-app.get('/volunteer', (req, res) => {
-  const search = req.query.search;
-  res.send(JSON.stringify(jsonV));;
-
-  for (let i = 0; i < volunteers.length; i++) {
-    let volunteer = volunteers[i];
-    if (volunteer.tag.includes(search)) {
-      results.push(volunteer.tag);
-    }
-  }
-  res.send(results);
+app.get('/volunteer', (req, resp) => {
+  volName = JSON.stringify(volunteers.tag)
+  resp.json(volName);
 });
 
 app.listen(8090, () => console.log('Listening on port 8090...'));

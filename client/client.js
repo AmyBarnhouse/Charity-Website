@@ -111,13 +111,33 @@ fetch("animals.json")
   document.querySelector('#aniBreed7').innerText = data[7].breed
   document.querySelector('#aniName8').innerText = data[8].name
   document.querySelector('#aniBreed8').innerText = data[8].breed
-  document.querySelector('#about0').innerText = data[0].age + ('\n') + data[0].description + ('\n') + data[0].country
+
 })
 
-fetch("volunteers.json")
-.then(response => response.json())
-.then(data => {
-  let names = data.map(element=> element.tag)
-  console.log(names)
-})
 
+// document.getElementById('volunteers').addEventListener('click', (event) => {
+// fetch("volunteers.json")
+// .then(response => response.json())
+// .then(data => {
+//   let names = data.map(element=> element.tag)
+//   console.log(names)
+// })
+// }
+
+document.getElementById('volunteers').addEventListener('click', (event) => {
+  fetch('http://127.0.0.1:8090/volunteer')
+    .then((response) => response.json())
+    .then((body) => renderVols(body))
+  // .then(body => renderThings(JSON.parse(body)))
+    //  document.getElementById('things').innerHTML=body)
+    .catch((error) => alert(error));
+});
+
+function renderVols(volFarms){
+  const contain = documemt.getElementById('volHere');
+  for (const thing of volFarms) {
+    const item = document.createElement('li');
+    item.innerHTML = thing;
+    contain.appendChild(item);
+  }
+}
