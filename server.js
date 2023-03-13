@@ -86,7 +86,7 @@ app.get('/animal', (req, res) => {
 
 app.get('/volunteer', (req, resp) => {
   volName = JSON.stringify(volunteers.tag)
-  resp.json(volName);
+  resp(volName);
 });
 
 app.listen(8090, () => console.log('Listening on port 8090...'));

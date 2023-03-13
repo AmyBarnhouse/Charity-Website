@@ -93,6 +93,7 @@ body {
     --bs-btn-border-color: #E95728;
     --bs-btn-hover-bg: #E95728;
     --bs-btn-hover-border-color: #E95728;
+    --bs-btn-active-bg:#E95728;
 }
 
 .btn-primary:disabled{
