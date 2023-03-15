@@ -1,11 +1,11 @@
 [
-    {"name": "Deniz", "breed": "Rabbit", "description":"spotty and super epic (the epicest)!", "age":"4 years", "country": "Turkey"},
-    {"name": "Izzy", "breed": "Cow", "description": "brown, fluffy, super intelligent and incredibly cute", "age":"6 months", "country": "United Kingdom"},
-    {"name": "Amy", "breed": "Piglet", "description":"pink and cuddly, super adorable, your bestest mate ever!", "age":"3 months", "country": "Surrey Hills, United Kingdom"},
-    {"name": "Sarah", "breed": "Lamb", "description":"kicks things, very noisy, doesn't cope well under stress", "age":"4 years", "country": "Alps, Switzerland"},
-    {"name": "Ryan", "breed": "Gosling", "description":"so funny and smart, colour-changing feathers", "age":"10 months", "country": "Northern Norfolk, United Kingdom"},
-    {"name":"Alison","breed":"Border Collie","description":"spritely, energetic ball of cuddliness","age":"10 years","country":"Suffolk, United Kingdom"},
-    {"name":"Amber","breed":"Cow","description":"fluffy highland cow, very cute and friendly and cool (the funniest cow I've ever met!)","age":"18 years","country":"Scotland, United Kingdom"},
+    {"name": "Deniz", "breed": "Rabbit", "description":"Deniz is a spotty 4 years old rabbit and comes from Turkey. She is great for cuddles!"},
+    {"name": "Izzy", "breed": "Cow", "description": "Izzy is a fluffy, brown cow from the UK. She is 4 months old and was born on our farm."},
+    {"name": "Amy", "breed": "Piglet", "description":"Amy is 3 months old and from the UK. Pink and cuddly, super adorable, she is your new best friend."},
+    {"name": "Sarah", "breed": "Lamb", "description":"Sarah is 4 years old and recently joined us from the Swiss Alps!"},
+    {"name": "Ryan", "breed": "Gosling", "description":"Ryan is 10 months old and from the UK. His mother sadly passed away so we look after him now."},
+    {"name":"Alison","breed":"Border Collie","description":"Alison is 10 years old and from the UK. She is a spritely, energetic ball of cuddliness"},
+    {"name":"Amber","breed":"Cow","description":"Amber is a fluffy highland cow, very cute and friendly. She is our oldest cow and has been with us for a while, nearing up to her 16th birthday!"},
     {"name": "Ted", "breed":"Terrapin Turtle", "description":"slow-moving and has a great sense of humour","age":"27 years", "country":"Aruba"},
     {"name": "Caitlin", "breed": "Pygmy Goat", "description":"sleeps a lot, occasionally aggressive towards turtles", "age":"4 years", "country":"Chad"}
     ]
