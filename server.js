@@ -31,6 +31,68 @@ const jsonV = require('./client/volunteers.json')
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+
+app.get('/volunteer', (req, resp) => {
+  volName = JSON.stringify(volunteers.tag)
+  resp(volName);
+});
+
+app.listen(8090, () => console.log('Listening on port 8090...'));
+
+app.post('/sponsored', function(req,res){
+  res.set('Content-Type', 'text/html');
+  console.log('got request')
+  console.log(req.body);
+  const { firstName } = req.body;
+  const { lastName } = req.body;
+  const { emailAdd } = req.body;
+  const { animalChoice } = req.body;
+  const { mediaRep } = req.body;
+  signUp = [{
+    'Name': firstName,
+    'Surname': lastName,
+    'Email Address': emailAdd,
+    'Animal Sponsored': animalChoice,
+    'How you found us': mediaRep
+  
+  }];
+
+const html = `
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Official certificate of animal sponsorship 2023</title>
+    <style>
+      body {
+        text-align: center
+      }
+      h2 {
+        text-decoration: underline
+      }
+      @font-face {
+        font-family: "My Custom Font";
+        src: url(../fonts/LuckyfieldRegular.ttf) format("truetype");
+    }
+    .customFontTitle { 
+        font-family: "My Custom Font", Verdana, Tahoma;
+        font-weight: bolder;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Thank you for sponsoring an animal!</h1>
+    <h3>This certificate is presented to:</h3>
+    <h2>${firstName} ${lastName}</h2>
+    <h3>In recognition of sponsorship of ${animalChoice}</h3>
+    <p></p>
+    <img alt="picture of animal" src="client/media/cuddly.png"></img
+    <p></p>
+    <p>Print out this certificate and bring it to our sanctuary to make payment and receive your official ${animalChoice} Goodie Bag!</p>
+  </body>
+`
+res.send(html)
+})
+
 // a new animal is added to the json file of all the animals, visible on 'http://127.0.0.1:8090/animal'
 app.post('/new', (req, resp) => {
   console.log('Got request');
@@ -47,6 +109,7 @@ app.post('/new', (req, resp) => {
     'description': description,
     'age': age,
     'country': country
+  
   }];
 
   console.log(newAnimal)
@@ -70,23 +133,3 @@ app.post('/new', (req, resp) => {
 
   console.log(json)
 });
-
-app.get('/animal', (req, res) => {
-  const search = req.query.search;
-  res.send(JSON.stringify(json));;
-
-  for (let i = 0; i < animals.length; i++) {
-    let animal = animals[i];
-    if (animal.breed.includes(search)) {
-      results.push(animal.fun_fact);
-    }
-  }
-  res.send(results);
-});
-
-app.get('/volunteer', (req, resp) => {
-  volName = JSON.stringify(volunteers.tag)
-  resp(volName);
-});
-
-app.listen(8090, () => console.log('Listening on port 8090...'));

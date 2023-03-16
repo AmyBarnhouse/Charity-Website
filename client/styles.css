@@ -63,14 +63,16 @@ body {
   .btn-outline-primary:hover,
   .btn-outline-primary:active,
   .btn-outline-primary:visited,
-  .btn-outline-primary:focus {
+  .btn-outline-primary:focus,
+  .btn-outline-secondary {
       background-color: #E95728;
       border-color: #E95728;
       color:#E95728;
   }
 
   
-  .btn-outline-success {
+  .btn-outline-success,
+  .btn-secondary {
     --bs-btn-color: #E95728;
     --bs-btn-border-color: #E95728;
     --bs-btn-hover-color: #fff;
@@ -87,7 +89,8 @@ body {
     --bs-gradient: none;
 }
 
-.btn-primary{
+.btn-primary,
+.btn-secondary{
     color: #E95728;
     --bs-btn-bg: #FFE3D9;
     --bs-btn-border-color: #E95728;

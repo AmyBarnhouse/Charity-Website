@@ -6,6 +6,6 @@
     {"name": "Ryan", "breed": "Gosling", "description":"Ryan is 10 months old and from the UK. His mother sadly passed away so we look after him now."},
     {"name":"Alison","breed":"Border Collie","description":"Alison is 10 years old and from the UK. She is a spritely, energetic ball of cuddliness"},
     {"name":"Amber","breed":"Cow","description":"Amber is a fluffy highland cow, very cute and friendly. She is our oldest cow and has been with us for a while, nearing up to her 16th birthday!"},
-    {"name": "Ted", "breed":"Terrapin Turtle", "description":"slow-moving and has a great sense of humour","age":"27 years", "country":"Aruba"},
-    {"name": "Caitlin", "breed": "Pygmy Goat", "description":"sleeps a lot, occasionally aggressive towards turtles", "age":"4 years", "country":"Chad"}
+    {"name": "Ted", "breed":"Terrapin Turtle", "description":"Ted is our 27 year old turtle from Aruba. He may be slow-moving but he has a great sense of humour!"},
+    {"name": "Caitlin", "breed": "Pygmy Goat", "description":"Caitlin is 4 years old from Chad. She sleeps a lot and is occasionally aggressive towards turtles!"}
     ]

@@ -116,7 +116,7 @@
       <img class="bd-placeholder-img rounded-circle" src="media/deniz.png" width="140" height="140" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
       <h2 class="fw-normal heading" id="aniName0"></h2>
       <p id="aniBreed0"></p>
-      <a id="detailButton0" class="btn btn-secondary">View details »</a>
+      <p><a id="detailButton0" class="btn btn-secondary">View details »</a></p>
       <p class="animal-description" style="display:none;" id="aniDesc0"></p>
     </div><!-- /.col-lg-4 -->
     
@@ -124,7 +124,7 @@
       <img class="bd-placeholder-img rounded-circle" src="media/izzy.png" width="140" height="140" role="img" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777" dy=".3em"></text></svg>
       <h2 class="fw-normal heading" id="aniName1"></h2>
       <p id="aniBreed1"></p>
-      <a id="detailButton1" class="btn btn-secondary">View details »</a>
+      <p><a id="detailButton1" class="btn btn-secondary">View details »</a></p>
       <p class="animal-description" style="display:none;" id="aniDesc1"></p>
     </div><!-- /.col-lg-4 -->
     
@@ -252,83 +252,90 @@
     
       <div>
       <h2>Sign Up Here:</h2>
-      <form>
-      <div class="input-group mb-3">
+      <form action="http://127.0.0.1:8090/sponsored" method="post">
+        <p>First Name: <input name="firstName" required></p>
+        <p>Last Name: <input name="lastName" required></p>
+        <p>Email Address: <input name="emailAdd" required></p>
+        <p>Which animal would you like to sponsor? <input name="animalChoice" required></p>
+        <p>How did you hear about us?<input name="mediaRep" required></p>
+        <p><input class="btn-primary btn mb-5" type="submit" value="Submit"></p>
+      </form>
+    
+      <!-- <div class="input-group mb-3">
         <span class="input-group-text col-sm-2">First and last name</span>
         <input type="text" aria-label="First name" class="form-control" id="first-name" required>
         <input type="text" aria-label="Last name" class="form-control" id="last-name" required>
       </div>
+      <div class="mb-3">
+        <label for="sourceInfo" class="form-label">Would you like to sponsor an animal?</label>
+      <select class="form-select" aria-label="Default select example" name="sourceInfo">
+        <option selected>(select one)</option>
+        <option value="1">Yes</option>
+        <option value="2">No</option>
+      </select>
+      </div> -->
 
 
-
-      <label for="sourceInfo" class="form-label">Which animal would you like to sponsor?</label>
-      <label for="animals">Choose an animal:</label>
-          <select name="animals" id="aanimals"  >
-          </select>
+      <!-- <label for="sourceInfo" class="form-label">Which animal would you like to sponsor?</label>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault" id="animal0">
-          <script>
-          fetch("animals.json")
-          .then(response => response.json())
-          .then(data => {
-          document.querySelector('#animal0').innerText = data[0].name})
-          </script>
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
+        <label id="aniChoice0" class="form-check-label" for="flexCheckDefault">
+        </label>
+      </div><div class="form-check">
+        <input class="form-check-input" id="display" type="checkbox" value="" id="flexCheckDefault">
+        <label id="aniChoice1" class="form-check-label" for="flexCheckDefault">
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-        <label class="form-check-label" for="flexCheckDefault">
-          Checked checkbox
+        <label id="aniChoice2" class="form-check-label" for="flexCheckDefault">
         </label>
       </div><div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Default checkbox
+        <label id="aniChoice3" class="form-check-label" for="flexCheckDefault">
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-        <label class="form-check-label" for="flexCheckDefault">
-          Checked checkbox
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label id="aniChoice4" class="form-check-label" for="flexCheckDefault">
         </label>
       </div><div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Default checkbox
+        <label id="aniChoice5" class="form-check-label" for="flexCheckDefault">
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Checked checkbox
-        </label>
-      </div><div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Default checkbox
+        <label id="aniChoice6" class="form-check-label" for="flexCheckDefault">
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Checked checkbox
+        <label id="aniChoice7" class="form-check-label" for="flexCheckDefault">
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-        <label class="form-check-label" for="flexCheckDefault">
-          Default checkbox
+        <label id="aniChoice8" class="form-check-label" for="flexCheckDefault">
         </label>
       </div>
 
-      <!-- from Bootstrap - basic example - https://getbootstrap.com/docs/5.2/forms/select/ -->
-      <div class="input-group mb-3">
+      from Bootstrap - basic example - https://getbootstrap.com/docs/5.2/forms/select/ -->
+      <!-- <div class="input-group mb-3">
         <span class="input-group-text col-sm-2">Email Address</span>
         <input id="emailMsg" type="text" class="form-control" placeholder="name@example.com" required>
+      </div> -->
+      <div class="mb-5"></div>
+      <hr class="featurette-divider mb-5">
+      <form onsubmit="return false">
+      <div class="form-check" required>
+        <input class="form-check-input" type="checkbox" value="">
+        <label class="form-check-label" for="flexCheckDefault">
+          I am interested in being contacted regarding volunteering opportunities</a>
+        </label>
       </div>
-      
-      <div class="mb-3">
+      <p></p>
+      <!-- <div class="mb-3">
         <label for="sourceInfo" class="form-label">How did you hear about us?</label>
         <select class="form-select" aria-label="Default select example" name="sourceInfo">
           <option selected>(select one)</option>
@@ -337,7 +344,7 @@
           <option value="3">School Advisor</option>
           <option value="4">Other</option>
         </select>
-        </div>
+        </div> -->
        
         <div class="form-check" required>
           <input class="form-check-input" type="checkbox" value="">
@@ -348,7 +355,7 @@
         
         <div id="myContainer">
       <!--from w3schools - snackbar - https://www.w3schools.com/howto/howto_js_snackbar.asp -->
-      <button class="w-20 btn btn-primary zoom float-end" type="submit" id="submitForm" onclick="myMove()">Submit</button>
+      <button class="w-20 btn btn-primary zoom" id="submitForm" onclick="myMove(), showInput()">Submit</button>
       <div id="snackbar">Thank you for signing up!</div>
       <div id="tests"></div>
       </div>

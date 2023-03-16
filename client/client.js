@@ -21,6 +21,10 @@ document.getElementById('submitBtn').addEventListener('click', () => {
   }
 });
 
+// window.getElementById('volunteers').addEventListener('click', () => {
+//   console.log('got results');
+// });
+
 // snackbar displays pop-up message when the user signs up
 // to provide a positive experience for them and show gratitude for sponsoring the animals.
 document.getElementById('submitForm').addEventListener('click', () => {
@@ -56,13 +60,13 @@ document.getElementById('submitForm').addEventListener('click', () => {
   id = setInterval(frame, 2);
 });
 
-// eslint-disable-next-line no-use-before-define
-document.getElementById('emailMsg').addEventListener('click', emailAlert);
-/** Displays alert to user when they click to put in their email address. */
-function emailAlert() {
-  // eslint-disable-next-line no-alert
-  alert('We promise to only send you helpful and relevant information.');
-}
+// // eslint-disable-next-line no-use-before-define
+// document.getElementById('emailMsg').addEventListener('click', emailAlert);
+// /** Displays alert to user when they click to put in their email address. */
+// function emailAlert() {
+//   // eslint-disable-next-line no-alert
+//   alert('We promise to only send you helpful and relevant information.');
+// }
 
 // connects to json file
 // fetch('./animals.json')
@@ -118,20 +122,20 @@ fetch('animals.json')
   .then((response) => response.json())
   .then((animals) => {
     animals.forEach((animal, index) => {
+      // eslint-disable-next-line no-console
       console.log(animal);
+      // eslint-disable-next-line no-console
       console.log(index);
 
-      console.log('aniName'+index);
+      console.log('aniName' + index);
       console.log(animal.name);
 
       document.getElementById('aniName' + index).innerText = animal.name;
       document.getElementById('aniBreed' + index).innerText = animal.breed;
       document.getElementById('aniDesc' + index).innerText = animal.description;
-
+      // document.getElementById('aniChoice' + index).innerText = animal.name
 
       document.getElementById('detailButton' + index).addEventListener('click', () => {
-
-        
         let x = document.getElementById('aniDesc' + index);
         if (x.style.display === 'none') {
           x.style.display = 'block';
@@ -142,9 +146,6 @@ fetch('animals.json')
     });
   });
 
-
-
-
 // document.getElementById('volunteers').addEventListener('click', (event) => {
 // fetch("volunteers.json")
 // .then(response => response.json())
@@ -154,35 +155,52 @@ fetch('animals.json')
 // })
 // }
 
-document.getElementById('volunteers').addEventListener('click', (event) => {
-  fetch('http://127.0.0.1:8090/volunteer')
-    .then((response) => response.json())
-    .then((body) => renderVols(body))
-  // .then(body => renderThings(JSON.parse(body)))
-    //  document.getElementById('things').innerHTML=body)
-    .catch((error) => alert(error));
-});
+// document.getElementById('volunteers').addEventListener('click', (event) => {
+//   fetch('http://127.0.0.1:8090/volunteer')
+//     .then((response) => response.json())
+//     .then((body) => renderVols(body))
+//   // .then(body => renderThings(JSON.parse(body)))
+//     //  document.getElementById('things').innerHTML=body)
+//     .catch((error) => alert(error));
+// });
 
-function renderVols(volFarms){
-  const contain = documemt.getElementById('volHere');
-  for (const thing of volFarms) {
-    const item = document.createElement('li');
-    item.innerHTML = thing;
-    contain.appendChild(item);
-  }
-}
+// function renderVols(volFarms){
+//   const contain = documemt.getElementById('volHere');
+//   for (const thing of volFarms) {
+//     const item = document.createElement('li');
+//     item.innerHTML = thing;
+//     contain.appendChild(item);
+//   }
+// }
 
-function dropdown(){
-fetch('/animal')
-.then((response) => response.json())
-.then((data) => {
-console.log(data)
-  data.forEach(animal) 
-  const adopts = document.querySelector('select#aanimals');
-    console.log(adopts)
-    const opt = document.createElement('option');
-    opt.label = data.name;
-    opt.value = data.name;
-    adopts.appendChild(opt); 
-  }
-)}
+// function dropdown(){
+// fetch('/animal')
+// .then((response) => response.json())
+// .then((data) => {
+// console.log(data)
+//   data.forEach(animal) 
+//   const adopts = document.querySelector('select#aanimals');
+//     console.log(adopts)
+//     const opt = document.createElement('option');
+//     opt.label = data.name;
+//     opt.value = data.name;
+//     adopts.appendChild(opt); 
+//   }
+// )}
+
+// fetch('volunteers.json')
+//   .then((response) => response.json())
+//   .then((volunteers) => {
+//     document.getElementById('volunteers').addEventListener('click', () => {
+//       let x = document.getElementById('volunteerNames');
+//       if (x.style.display === 'none') {
+//         x.style.display = 'block';
+//       } else {
+//         x.style.display = 'none';
+//       }
+//     });
+//   });
+
+// function showInput() {
+//   document.getElementById('display').innerHTML = 
+//               document.getElementById("user_input").value;
