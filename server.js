@@ -32,7 +32,7 @@ app.get('/volunteer', (req, res) => {
 
 app.listen(8090, () => console.log('Listening on port 8090...'));
 
-app.post('/sponsored', function(req,res){
+app.post('/sponsored', (req,res) =>{
   res.set('Content-Type', 'text/html');
   console.log('got request')
   console.log(req.body);
@@ -46,11 +46,10 @@ app.post('/sponsored', function(req,res){
     'Surname': lastName,
     'Email Address': emailAdd,
     'Animal Sponsored': animalChoice,
-    'How you found us': mediaRep
-  
+    'How you found us': mediaRep,
   }];
 
-const html = `
+  const html = `
 <!DOCTYPE html>
 <html>
   <head>
@@ -82,9 +81,9 @@ const html = `
     <p></p>
     <p>Print out this certificate and bring it to our sanctuary to make payment and receive your official ${animalChoice} Goodie Bag!</p>
   </body>
-`
-res.send(html)
-})
+`;
+  res.send(html);
+});
 
 // a new animal is added to the json file of all the animals, visible on 'http://127.0.0.1:8090/animal'
 app.post('/new', (req, resp) => {
@@ -114,20 +113,20 @@ app.post('/new', (req, resp) => {
     country: country};
   string = JSON.stringify(reply);
   resp.send(string);
-  console.log(string)
+  console.log(string);
   newAnimal.push();
 
-  console.log(json)
+  console.log(json);
   json.push(newAnimal);
   jsonstr = JSON.stringify(json);
-  console.log(json)
-  console.log('gsjsgjsgb')
-  console.log(jsonstr)
+  console.log(json);
+  console.log('gsjsgjsgb');
+  console.log(jsonstr);
 
-  console.log(json)
+  console.log(json);
 });
 
 app.get('/animal', (req, res) => {
   const search = req.query.search;
-  res.send(JSON.stringify(json));;
+  res.send(JSON.stringify(json));
 });

@@ -6,6 +6,26 @@ For my assignment, I have chosen the Charity domain. I have created a website us
 
 The website needs to be run on a web server and can be run using the command "npm start". This to avoid CORS errors and allow the server to respond to any requests from the client user. The website can then be accessed on http://127.0.0.1:8090/index.html.
 
+Files included:
+README
+
+index.html
+admin.html
+styles.css
+image folder
+font folder
+
+client.js
+client.test.js
+server.js
+
+animals.json
+volunteers.json
+package.json
+APIDocumentation.js
+.eslintrc.js
+package-lock.json
+
 
 References:
 - carousel images from pixabay, accessed 3/3/23
@@ -16,4 +36,5 @@ References:
 - modal static backdrop - https://getbootstrap.com/docs/5.2/components/modal/ , accessed 12/3/23
 - sun image - https://pixabay.com/illustrations/sun-smiley-cartoon-smile-happy-5839655/  , accessed 12/3/23
 - snackbar - https://www.w3schools.com/howto/howto_js_snackbar.asp , accessed 12/3/23
-
+- express - https://expressjs.com/
+- bootstrap - https://getbootstrap.com/
