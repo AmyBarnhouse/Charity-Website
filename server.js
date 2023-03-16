@@ -11,13 +11,6 @@ const animalFacts = ['Our animals come from all over the world,',
 
 app.use(express.static('client'));
 
-// app.get('/', (req,res) => {
-//     res.send('hello world');
-// })
-
-// app.get('/api/courses', (req, res) => {
-//     res.send([1,2,3,4]);
-// })
 
 app.get('/thing/list', (req, resp) => {
   // resp.send(things);
@@ -32,9 +25,9 @@ const jsonV = require('./client/volunteers.json')
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-app.get('/volunteer', (req, resp) => {
-  volName = JSON.stringify(volunteers.tag)
-  resp(volName);
+app.get('/volunteer', (req, res) => {
+  const search = req.query.search;
+  res.send(JSON.stringify(jsonV));;
 });
 
 app.listen(8090, () => console.log('Listening on port 8090...'));
@@ -132,4 +125,9 @@ app.post('/new', (req, resp) => {
   console.log(jsonstr)
 
   console.log(json)
+});
+
+app.get('/animal', (req, res) => {
+  const search = req.query.search;
+  res.send(JSON.stringify(json));;
 });

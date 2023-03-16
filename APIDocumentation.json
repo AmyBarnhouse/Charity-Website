@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "552886b1-6dad-4bbf-bcae-9cc1597d0228",
+		"name": "Charity Website",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26073387"
+	},
+	"item": [
+		{
+			"name": "About the website",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/thing/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"thing",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "About the website",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/thing/list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"thing",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "383"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17f-8x0ny0y5L9DVQbPOczmorP28/Hk\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 11:22:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"Our animals come from all over the world,\",\n    \"They quite often come from harsh backgrounds and require extra care and support from us.\",\n    \"We can keep looking after them with your help.\",\n    \"Our visitor centre is open for families to come and meet our little friends all year round.\",\n    \"Highlights include our petting stations and an animal-themed play area for children!\",\n    \"Donate today!!\"\n]"
+				}
+			]
+		},
+		{
+			"name": "New animal request in admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/new",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"new"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8090/new",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/new",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"new"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-C6mKCKIgwaMvchgt2kvFSFu8J8Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 11:23:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\"note\":\"Thank you for submitting a new animal request\"}"
+				}
+			]
+		},
+		{
+			"name": "Sponsorship Certificate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/sponsored",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"sponsored"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sponsorship Certificate",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/sponsored",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"sponsored"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "914"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"392-QNE8fGmlxeyFU0yiz54gPQqMKnE\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 11:30:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\n<!DOCTYPE html>\n<html>\n    <head>\n        <title>Official certificate of animal sponsorship 2023</title>\n        <style>\n      body {\n        text-align: center\n      }\n      h2 {\n        text-decoration: underline\n      }\n      @font-face {\n        font-family: \"My Custom Font\";\n        src: url(../fonts/LuckyfieldRegular.ttf) format(\"truetype\");\n    }\n    .customFontTitle { \n        font-family: \"My Custom Font\", Verdana, Tahoma;\n        font-weight: bolder;\n    }\n    </style>\n    </head>\n    <body>\n        <h1>Thank you for sponsoring an animal!</h1>\n        <h3>This certificate is presented to:</h3>\n        <h2>undefined undefined</h2>\n        <h3>In recognition of sponsorship of undefined</h3>\n        <p></p>\n        <img alt=\"picture of animal\" src=\"client/media/cuddly.png\"></img\n        <p></p>\n        <p>Print out this certificate and bring it to our sanctuary to make payment and receive your official undefined Goodie Bag!</p>\n    </body>"
+				}
+			]
+		},
+		{
+			"name": "JSON animals file",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/animal",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"animal"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "JSON animals file",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/animal",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"animal"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1324"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"52c-rD685ZUZOxycQw7WWFH7DfRfUDQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 11:29:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"name\":\"Deniz\",\"breed\":\"Rabbit\",\"description\":\"Deniz is a spotty 4 years old rabbit and comes from Turkey. She is great for cuddles!\"},{\"name\":\"Izzy\",\"breed\":\"Cow\",\"description\":\"Izzy is a fluffy, brown cow from the UK. She is 4 months old and was born on our farm.\"},{\"name\":\"Amy\",\"breed\":\"Piglet\",\"description\":\"Amy is 3 months old and from the UK. Pink and cuddly, super adorable, she is your new best friend.\"},{\"name\":\"Sarah\",\"breed\":\"Lamb\",\"description\":\"Sarah is 4 years old and recently joined us from the Swiss Alps!\"},{\"name\":\"Ryan\",\"breed\":\"Gosling\",\"description\":\"Ryan is 10 months old and from the UK. His mother sadly passed away so we look after him now.\"},{\"name\":\"Alison\",\"breed\":\"Border Collie\",\"description\":\"Alison is 10 years old and from the UK. She is a spritely, energetic ball of cuddliness\"},{\"name\":\"Amber\",\"breed\":\"Cow\",\"description\":\"Amber is a fluffy highland cow, very cute and friendly. She is our oldest cow and has been with us for a while, nearing up to her 16th birthday!\"},{\"name\":\"Ted\",\"breed\":\"Terrapin Turtle\",\"description\":\"Ted is our 27 year old turtle from Aruba. He may be slow-moving but he has a great sense of humour!\"},{\"name\":\"Caitlin\",\"breed\":\"Pygmy Goat\",\"description\":\"Caitlin is 4 years old from Chad. She sleeps a lot and is occasionally aggressive towards turtles!\"}]"
+				}
+			]
+		},
+		{
+			"name": "JSON volunteers file",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8090/volunteer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8090",
+					"path": [
+						"volunteer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "JSON volunteers file",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8090/volunteer",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8090",
+							"path": [
+								"volunteer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "61"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3d-hhHFeA0O+GxMAuBbQmarvKqjsUg\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 16 Mar 2023 11:36:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"tag\":\"Zac\"},{\"tag\":\"Hugh\"},{\"tag\":\"Ellie\"},{\"tag\":\"Mark\"}]"
+				}
+			]
+		}
+	]
+}

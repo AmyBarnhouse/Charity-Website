@@ -1,5 +1,19 @@
+AMY BARNHOUSE khwt31
+
+Summative Assignment: Server-side scripting
+
+For my assignment, I have chosen the Charity domain. I have created a website using HTML, CSS and JavaScript (client and server) aimed at families with young children who are animal-lovers and interested in supporting an animal charity, with the option to sponsor one of the animals or attend open days
+
+The website needs to be run on a web server and can be run using the command "npm start". This to avoid CORS errors and allow the server to respond to any requests from the client user. The website can then be accessed on http://127.0.0.1:8090/index.html.
+
+
 References:
 - carousel images from pixabay, accessed 3/3/23
     https://pixabay.com/photos/nature-pasture-livestock-cattle-5625841/
     https://pixabay.com/photos/sheeps-lambs-flock-animals-graze-3437467/
     https://pixabay.com/photos/piggy-young-animals-pig-small-2782618/
+- index.html layout adapted from https://bootstrapmade.com/bootstrap-one-page-templates/ , accessed 1/3/23
+- modal static backdrop - https://getbootstrap.com/docs/5.2/components/modal/ , accessed 12/3/23
+- sun image - https://pixabay.com/illustrations/sun-smiley-cartoon-smile-happy-5839655/  , accessed 12/3/23
+- snackbar - https://www.w3schools.com/howto/howto_js_snackbar.asp , accessed 12/3/23
+

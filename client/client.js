@@ -146,6 +146,8 @@ fetch('animals.json')
     });
   });
 
+
+
 // document.getElementById('volunteers').addEventListener('click', (event) => {
 // fetch("volunteers.json")
 // .then(response => response.json())

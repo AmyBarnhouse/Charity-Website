@@ -143,3 +143,7 @@ td {
 td {
     font-weight: lighter;
 }
+
+.animal-description {
+    text-align: center;
+}
